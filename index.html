@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<style>
+          p{
+          border:1px solid rgb(2, 146, 2);
+          }
+</style>
+<body>
+          <p>Hello World</p>
+</body>
+
+<script src="./jquery-3.4.1.min.js"></script>
+<script>
+       $('body').append('<button class="btn1">Change</button><button class="btn2">Reset</button>')
+       $('p').css({
+               width:"200px",
+               height:"100px",
+               background:"green", 
+               textAlign:"center",
+               paddingTop:"70px",
+               fontSize:"2em",
+               
+       })
+                  $('.btn1').on('click',function change1(){
+                          $('p').animate({
+                                    width:"1200px",
+                                    height:"100px",
+                           },1000,"swing")
+                          $("p").animate({
+                              height:"150px",
+                          },1000,"swing")
+                          $("p").animate({
+                             borderWidth:"40px"
+                          },1000,"swing")
+                        })
+
+          $('.btn2').on('click',function c(){
+                          $('p').animate({
+                                    width:"200px",
+                                    height:"100px",
+                                    background:"green", 
+                                    textAlign:"center",
+                                    paddingTop:"70px",
+                                    fontSize:"2em",
+                                    borderWidth:"",
+                          },1000,"swing")
+                        })
+          
+
+
+</script>
+</html>
